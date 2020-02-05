@@ -25,6 +25,14 @@ namespace SwedbankPay.Sdk.Payments
         Task<Swish.Payment> CreateSwishPayment(Swish.PaymentRequest paymentRequest, PaymentExpand paymentExpand = PaymentExpand.None);
 
 
+        /// <summary>
+        ///     Creates a new Vipps payment
+        /// </summary>
+        /// <param name="paymentRequest"></param>
+        /// <param name="paymentExpand"></param>
+        /// <returns></returns>
+        Task<Vipps.Payment> CreateVippsPayment(Vipps.PaymentRequest paymentRequest, PaymentExpand paymentExpand = PaymentExpand.None);
+
         ///// <summary>
         /////     Gets an existing card payment.
         ///// </summary>

@@ -49,5 +49,13 @@ namespace SwedbankPay.Sdk.Payments
         ///// <param name="paymentExpand"></param>
         ///// <returns></returns>
         Task<Swish.Payment> GetSwishPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None);
+
+        ///// <summary>
+        /////     Gets an existing Vipps payment.
+        ///// </summary>
+        ///// <param name="id"></param>
+        ///// <param name="paymentExpand"></param>
+        ///// <returns></returns>
+        Task<Vipps.Payment> GetVippsPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None);
     }
 }

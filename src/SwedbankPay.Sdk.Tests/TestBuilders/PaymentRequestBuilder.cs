@@ -60,9 +60,9 @@ namespace SwedbankPay.Sdk.Tests.TestBuilders
             );
         }
 
-    public Payments.Vipps.PaymentRequest BuildVippsRequest()
+    public Payments.VippsPayments.PaymentRequest BuildVippsRequest()
         {
-            return new Payments.Vipps.PaymentRequest(
+            return new Payments.VippsPayments.PaymentRequest(
                 this.operation,
                 this.intent,
                 this.currency,

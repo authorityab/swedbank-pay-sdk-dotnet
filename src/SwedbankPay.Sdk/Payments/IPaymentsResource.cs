@@ -31,7 +31,7 @@ namespace SwedbankPay.Sdk.Payments
         /// <param name="paymentRequest"></param>
         /// <param name="paymentExpand"></param>
         /// <returns></returns>
-        Task<Vipps.Payment> CreateVippsPayment(Vipps.PaymentRequest paymentRequest, PaymentExpand paymentExpand = PaymentExpand.None);
+        Task<VippsPayments.Payment> CreateVippsPayment(VippsPayments.PaymentRequest paymentRequest, PaymentExpand paymentExpand = PaymentExpand.None);
 
         ///// <summary>
         /////     Gets an existing card payment.
@@ -56,6 +56,6 @@ namespace SwedbankPay.Sdk.Payments
         ///// <param name="id"></param>
         ///// <param name="paymentExpand"></param>
         ///// <returns></returns>
-        Task<Vipps.Payment> GetVippsPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None);
+        Task<VippsPayments.Payment> GetVippsPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None);
     }
 }

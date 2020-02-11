@@ -44,19 +44,19 @@ namespace SwedbankPay.Sdk.Payments
         }
 
 
-        public async Task<VippsPayments.Payment> GetVippsPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None)
+        public async Task<Vipps.Payment> GetVippsPayment(Uri id, PaymentExpand paymentExpand = PaymentExpand.None)
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return await VippsPayments.Payment.Get(id, this.swedbankPayHttpClient, GetExpandQueryString(paymentExpand));
+            return await Vipps.Payment.Get(id, this.swedbankPayHttpClient, GetExpandQueryString(paymentExpand));
         }
 
 
-        public async Task<VippsPayments.Payment> CreateVippsPayment(VippsPayments.PaymentRequest paymentRequest,
+        public async Task<Vipps.Payment> CreateVippsPayment(Vipps.PaymentRequest paymentRequest,
                                                             PaymentExpand paymentExpand = PaymentExpand.None)
         {
-            return await VippsPayments.Payment.Create(paymentRequest, this.swedbankPayHttpClient, GetExpandQueryString(paymentExpand));
+            return await Vipps.Payment.Create(paymentRequest, this.swedbankPayHttpClient, GetExpandQueryString(paymentExpand));
         }
     }
 }
